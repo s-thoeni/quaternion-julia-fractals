@@ -6,22 +6,22 @@ Projektarbeit zum Modul BZG1301 (Programmieren in Matlab) &amp; BZG1310 (Objekto
 # Beteiligte Personen:
 Entwickler / Studenten:
  - Matthias Sidler (sidlm3)
- - Stefan Thöni (thons1)
+ - Stefan ThÃ¶ni (thons1)
 
 Betreuung durch:
  - Markx Stampfli
 
 # Abstract
 Julia-Mengen sowie die Mandelbrot-Menge sind nicht nur in der komplexen Ebene, sondern auch im hyperkomplexen Raum der Quaternionen fraktal.
-Diese Tatsache wurde in dieser Projektarbeit untersucht und es wurde ein kleines Matlab-Programm erstellt, welches diesen Fakt auf grafisch und künstlerisch hübsche weise präsentiert.
+Diese Tatsache wurde in dieser Projektarbeit untersucht und es wurde ein kleines Matlab-Programm erstellt, welches diesen Fakt auf grafisch und kÃ¼nstlerisch hÃ¼bsche weise prÃ¤sentiert.
 
 # Verzeichnisstruktur
 
-Die Projektdokumentation sowie Unterlagen zu der Abschlusspräsentation sind im Ordner doc abgelegt
+Die Projektdokumentation sowie Unterlagen zu der AbschlussprÃ¤sentation sind im Ordner doc abgelegt
 
 Die finale Version des erstellten Programmes ist im Verzeichnis final abgelegt.
 
-Alle restlichen Verzeichnisse dienen dem Dokumentieren von bestimmten Meilensteinen und haben lediglich Prototyp-qualität.
+Alle restlichen Verzeichnisse dienen dem Dokumentieren von bestimmten Meilensteinen und haben lediglich Prototyp-qualitÃ¤t.
 
 Ein paar Beispiel-Bilder die mit Matlab generiert worden sind, sind im Ordner gallery zu finden.
 

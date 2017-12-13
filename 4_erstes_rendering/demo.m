@@ -1,0 +1,1 @@
+fractalGenerator(-0.2,0.8,0,0);
