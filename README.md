@@ -27,13 +27,13 @@ Ein paar Beispiel-Bilder die mit Matlab generiert worden sind, sind im Ordner ga
 
 ## Matlab-referenzen
 Folgende Matlab seiten sowie Beispiel-Code wurden extensiv benutzt bei der erarbeitung dieses Projektes:
-https://ch.mathworks.com/help/distcomp/examples/illustrating-three-approaches-to-gpu-computing-the-mandelbrot-set.html
+https://ch.mathworks.com/help/distcomp/examples/illustrating-three-approaches-to-gpu-computing-the-mandelbrot-set.html  
 https://ch.mathworks.com/help/distcomp/parallel.gpu.cudakernel.html 
 
 ## Quellen
-https://en.wikipedia.org/wiki/Mandelbrot_set
-https://en.wikipedia.org/wiki/Julia_set
-http://bugman123.com/Hypercomplex/
-https://en.wikipedia.org/wiki/Quaternion
-https://ch.mathworks.com
-http://paulbourke.net/fractals/quatjulia/ 
+https://en.wikipedia.org/wiki/Mandelbrot_set  
+https://en.wikipedia.org/wiki/Julia_set  
+http://bugman123.com/Hypercomplex/  
+https://en.wikipedia.org/wiki/Quaternion  
+https://ch.mathworks.com  
+http://paulbourke.net/fractals/quatjulia/   
