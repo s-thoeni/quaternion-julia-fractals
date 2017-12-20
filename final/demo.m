@@ -1,1 +1,1 @@
-generateHighResolutionFractal(-0.2, 0.8 , 0 , 0, 'demo.jpg')
+generateHighResolutionFractal(-0.090886,0.432, 0.0213, -0.54, 'demo.jpg')

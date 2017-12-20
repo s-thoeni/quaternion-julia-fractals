@@ -43,12 +43,16 @@ numElements = numel( xGrid );
 kernel.ThreadBlockSize = [kernel.MaxThreadsPerBlock,1,1];
 kernel.GridSize = [ceil(numElements/kernel.MaxThreadsPerBlock),1];
 
-% The result from our calculations will be saved here
+% 
 count = zeros( size(xGrid), 'gpuArray' );
 
-% Call the kernel and iterate on gpu
+% Calculate
 count = feval( kernel, count, xGrid, yGrid, zGrid, wGrid, cx, cy, cz, cw, maxIterations, numElements );
 
-% Gather the result from the GPU memory
-count = gather( count );
+%count = log( count );
+
+% Show
+count = gather( count ); % Fetch the data back from the GPU
+
+iso = isosurface(count, 30);
 end

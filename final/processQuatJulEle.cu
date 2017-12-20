@@ -1,9 +1,8 @@
 /**
- * @file pctdemo_processMandelbrotElement.cu
+ * @file processQuatJulEle_linux.cu
  * 
- * CUDA code to calculate the Mandelbrot Set on a GPU.
- * 
- * Copyright 2011 The MathWorks, Inc.
+ * Calculate julia sets for quaternions.
+ *  
  */
 
 /** Work out which piece of the global array this thread should operate on */ 
@@ -18,8 +17,9 @@ __device__ size_t calculateGlobalIndex() {
     return localThreadIdx + globalBlockIndex*threadsPerBlock;
 
 }
-
-/** The actual Mandelbrot algorithm for a single location */ 
+/** 
+    Iterate for one point and return its count
+ */ 
 __device__ unsigned int doIterations( double const xPart0, 
                                       double const yPart0,
                                       double const zPart0,
@@ -35,7 +35,7 @@ __device__ unsigned int doIterations( double const xPart0,
     double zPart = zPart0;
     double wPart = wPart0;
     unsigned int count = 0;
-    // Loop until escape
+    // Loop until escaped. Check Quaternion magnitude smaler than 4
     while ( ( count <= maxIters )
             && ((xPart*xPart + yPart*yPart + zPart*zPart + wPart*wPart) <= 16.0) ) {
         ++count;
@@ -56,9 +56,9 @@ __device__ unsigned int doIterations( double const xPart0,
 }
 
 
-/** Main entry point.
- * Works out where the current thread should read/write to global memory
- * and calls doIterations to do the actual work.
+/** 
+ * Main entry point.
+ * Read data from arraybuffer and call doIterations for every point.
  */
 __global__ void processMandelbrotElement( 
                       double * out, 

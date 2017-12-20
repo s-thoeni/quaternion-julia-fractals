@@ -18,23 +18,17 @@ wlim = [-1.5 1.5];
 % cw = -0.496;
 
 linux = false;
-% createFractal is called for 8 sub-cubes and then patched together using
-% cat
-
-% front, bottom, left cube
+% create fractal is called 
+% front, bottom, left
 fbl = createFractal(cx,cy,cz,cw, xlim(1:2), ylim(1:2), zlim(1:2), wlim, sampleSize, linux);
-% front, bottom, right cube
+% front, bottom, right
 fbr = createFractal(cx,cy,cz,cw, xlim(2:3), ylim(1:2), zlim(1:2), wlim, sampleSize, linux);
-% cat fbl and fbr together to get front-bottom element
+% front, bottom
 fb = cat(2, fbl, fbr);
 
-% bottom back left cube
 bbl = createFractal(cx,cy,cz,cw, xlim(1:2), ylim(2:3), zlim(1:2), wlim, sampleSize, linux);
-% bottom back right cube
 bbr = createFractal(cx,cy,cz,cw, xlim(2:3), ylim(2:3), zlim(1:2), wlim, sampleSize, linux);
-% bbl and bbr concatenated results in bottom back element
 bb = cat(2, bbl, bbr);
-% fb and bb concatenated results in the bottom plane of the cube
 bottom = cat(1,fb,bb);
 
 ftl = createFractal(cx,cy,cz,cw, xlim(1:2), ylim(1:2), zlim(2:3), wlim, sampleSize, linux);
@@ -46,10 +40,8 @@ btr = createFractal(cx,cy,cz,cw, xlim(2:3), ylim(2:3), zlim(2:3), wlim, sampleSi
 bt = cat(2, btl, btr);
 top = cat(1, ft,bt);
 
-% the bottom and top concateneted gives the result
 result = cat(3, bottom, top);
 
-% create isosurface and call render
 render(isosurface(result,12), filename);
 %count = cat(1, count, reshape(createFractalCnt(cx,cy,cz,cw, xlim(2:3), ylim(1:2), zlim(1:2), wlim, sampleSize), [], 1));
 %render(isosurface(reshape(count, [800,400,400]), 30));

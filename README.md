@@ -9,7 +9,7 @@ Entwickler / Studenten:
  - Stefan Thöni (thons1)
 
 Betreuung durch:
- - Markx Stampfli
+ - Marx Stampfli
 
 ## Abstract
 Julia-Mengen sowie die Mandelbrot-Menge sind nicht nur in der komplexen Ebene, sondern auch im hyperkomplexen Raum der Quaternionen fraktal.
@@ -17,13 +17,16 @@ Diese Tatsache wurde in dieser Projektarbeit untersucht und es wurde ein kleines
 
 ## Verzeichnisstruktur
 
-Die Projektdokumentation sowie Unterlagen zu der Abschlusspräsentation sind im Ordner doc abgelegt
+Die Projektdokumentation sowie Unterlagen zu der Abschlusspräsentation sind im Root-Verzeichnis abgelegt
 
 Die finale Version des erstellten Programmes ist im Verzeichnis final abgelegt.
 
 Alle restlichen Verzeichnisse dienen dem Dokumentieren von bestimmten Meilensteinen und haben lediglich Prototyp-qualität.
 
 Ein paar Beispiel-Bilder die mit Matlab generiert worden sind, sind im Ordner gallery zu finden.
+
+## Systemanforderungen
+Da die Berechnungen mithilfe von cuda auf der GPU durchgeführt wird eine Nvidia-GPU vorausgesetzt. Je nach verwendeter sampling rate (zu setzten in generateHighResolutionFractal.m) wird eine hohe Menge Arbeitsspeicher verwendet. (samplingrate = 400 => ca 16Gb Memory)
 
 ## Matlab-referenzen
 Folgende Matlab seiten sowie Beispiel-Code wurden extensiv benutzt bei der erarbeitung dieses Projektes:
