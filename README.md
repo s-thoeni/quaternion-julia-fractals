@@ -17,19 +17,24 @@ Diese Tatsache wurde in dieser Projektarbeit untersucht und es wurde ein kleines
 
 ## Verzeichnisstruktur
 
-Die Projektdokumentation sowie Unterlagen zu der Abschlusspräsentation sind im Root-Verzeichnis abgelegt
+Die Projektdokumentation sowie Unterlagen zu der Abschlusspräsentation sind im Root-Verzeichnis abgelegt.
 
 Die finale Version des erstellten Programmes ist im Verzeichnis final abgelegt.
 
-Alle restlichen Verzeichnisse dienen dem Dokumentieren von bestimmten Meilensteinen und haben lediglich Prototyp-qualität.
+Alle restlichen Verzeichnisse dienen dem Dokumentieren von bestimmten Meilensteinen und haben lediglich Prototyp-Qualität.
 
 Ein paar Beispiel-Bilder die mit Matlab generiert worden sind, sind im Ordner gallery zu finden.
 
 ## Systemanforderungen
-Da die Berechnungen mithilfe von cuda auf der GPU durchgeführt wird eine Nvidia-GPU vorausgesetzt. Je nach verwendeter sampling rate (zu setzten in generateHighResolutionFractal.m) wird eine hohe Menge Arbeitsspeicher verwendet. (samplingrate = 400 => ca 16Gb Memory)
+Die Voraussetzungen für die Ausführung des finalen Programms sind:
+- MATLAB, in Version R2017b getestet
+- NVIDIA GPU mit CUDA Unterstützung, mind. 2 GB RAM
+- CUDA Drivers von NVIDIA
+- Mind. 16 GB freie RAM
+Das benötigte Memory ist abhängig von der gewählten Samplingrate. Oben genannte Mindestanforderung an RAM gilt bei einer Samplingrate von 400.
 
 ## Matlab-referenzen
-Folgende Matlab seiten sowie Beispiel-Code wurden extensiv benutzt bei der erarbeitung dieses Projektes:
+Folgende Matlab seiten sowie Beispiel-Code wurden extensiv benutzt bei der Erarbeitung dieses Projektes:
 https://ch.mathworks.com/help/distcomp/examples/illustrating-three-approaches-to-gpu-computing-the-mandelbrot-set.html  
 https://ch.mathworks.com/help/distcomp/parallel.gpu.cudakernel.html 
 
