@@ -38,7 +38,7 @@ z = gpuArray.linspace( zlim(1), zlim(2), gridSize );
 wGrid = zeros(gridSize, gridSize, gridSize);
 %q0 = cat(4, xGrid, yGrid, zGrid, wGrid);
 
-% Initialize memory on cpu and define blocksizes
+% Initialize memory on gpu and define blocksizes
 numElements = numel( xGrid );
 kernel.ThreadBlockSize = [kernel.MaxThreadsPerBlock,1,1];
 kernel.GridSize = [ceil(numElements/kernel.MaxThreadsPerBlock),1];
